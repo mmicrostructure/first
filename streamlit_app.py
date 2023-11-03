@@ -115,7 +115,6 @@ dataset_name=st.sidebar.selectbox("select the option", ("None","Pearlite lamella
 if dataset_name== "Pearlite lamella orientation map":
     
     scale=cv2.imread("scale.png")
-    print(scale.shape)
     scale = cv2.cvtColor(scale, cv2.COLOR_BGR2RGB)
     
     uploaded_file = st.sidebar.file_uploader("Choose a Ferrite and Pearlite SEM micrograph ...")
@@ -221,7 +220,7 @@ elif dataset_name== "Single phase microstructure cleaning":
 
 elif dataset_name== "Pearlite inter lamella spacing":
     
-    scale=cv2.imread("C:/Users/91916/Desktop/training/paper 3/GUI/trials-2/images/scale.png")
+    scale=cv2.imread("scale.png")
     scale = cv2.cvtColor(scale, cv2.COLOR_BGR2RGB)
     
     uploaded_file = st.sidebar.file_uploader("Choose a Ferrite and Pearlite SEM micrograph ...")
