@@ -121,7 +121,7 @@ with  tab1:
     
 
 with tab3:
-    st.header("Contact")
+    st.header("Author Details")
     st.subheader("Prof. Sandeep Sangal and Shikhar K Jha")
     
     col1,col2,col3= st.columns(3,gap="small")
