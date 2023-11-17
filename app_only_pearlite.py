@@ -126,18 +126,18 @@ with tab3:
     
     col1,col2,col3= st.columns(3,gap="small")
     with col1:
-        sangal=cv2.imread("C:/Users/91916/Desktop/training/paper 3/GUI/trials-2/images/sangal_1.png",0)
+        sangal=cv2.imread("sangal_1.png",0)
         st.image(sangal,caption="Prof.Sandeep Sangal")
         st.text("Email-sangals@iitk.ac.in")
     with col2:
-        shikhar=cv2.imread("C:/Users/91916/Desktop/training/paper 3/GUI/trials-2/images/shikhar.png",0)
+        shikhar=cv2.imread("shikhar.png",0)
         st.image(shikhar,caption="Prof. Shikhar K. Jha ")
         st.text("Email-skjha@iitk.ac.in")
         
     with col3:
         
         
-        nikhil=cv2.imread("C:/Users/91916/Desktop/training/paper 3/GUI/trials-2/images/nikhil_1.png",0)
+        nikhil=cv2.imread("nikhil_1.png",0)
         st.image(nikhil,caption="Ph.D Student Nikhil Chaurasia")
         st.subheader("Linkedin-www.linkedin.com/in/nikhil-chaurasia")
         st.text("Email-nikc@iitk.ac.in")
