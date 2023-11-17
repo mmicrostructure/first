@@ -77,7 +77,7 @@ with st.sidebar:
    dataset_name=st.sidebar.selectbox("select the option", ("None","ferrite and pearlite phase quatification"))
 
 
-tab1, tab2, tab3 = st.tabs(["phase quatification", "paper", "contact"])
+tab1, tab2, tab3 = st.tabs(["phase quatification", "paper", "Author Details"])
 
 
 
@@ -121,8 +121,8 @@ with  tab1:
     
 
 with tab3:
-    st.header("Author Details")
-    st.subheader("Prof. Sandeep Sangal and Shikhar K Jha")
+    st.header("Details")
+    st.subheader("Prof. Sandeep Sangal Prof. Shikhar K Jha and Nikhil Chaurasia")
     
     col1,col2,col3= st.columns(3,gap="small")
     with col1:
