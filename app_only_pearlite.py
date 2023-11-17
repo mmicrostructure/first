@@ -19,7 +19,7 @@ from matplotlib import pyplot as plt
 
 from img_classification_only_pearlite import teachable_machine_classification
 
-model_adress_pear='C:/Users/91916/Desktop/training/paper 3/model/trail-3_100ep_4_batch_extend_trial5.h5'
+model_adress_pear='trail-3_100ep_4_batch_extend_trial5.h5'
 
 
 def crop_fun(image):
