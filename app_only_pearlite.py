@@ -67,7 +67,7 @@ def pearlite_phase_processing(final_img):
     btn = st.download_button(label="Download image",data=buffer,file_name="Ferrite phase fraction-"+str(phase)+".png",mime="image/png")
     
 
-st.header("Phase quantification and micrograph cleaning using deep learning")
+st.header("Pearlite Ferrite phase quantification using deep learning")
 st.subheader("Work by N.Chaurasia, S.Sangal and S.K.Jha")
 #st.text("Upload a SEM micrographs for phase quantification")
 
