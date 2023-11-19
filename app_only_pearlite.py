@@ -24,30 +24,7 @@ from img_classification_only_pearlite import teachable_machine_classification
 model_adress_pear='trail-3_100ep_4_batch_extend_trial5.h5'
 
 
-"""
-def read_pdf():
-    file_path="PhD CV.pdf"
 
-    with open(file_path, 'rb') as file:
-        pdf_reader = PdfReader(file)
-        pdf_contents = file.read()
-        encoded_pdf = base64.b64encode(pdf_contents).decode()
-        return encoded_pdf
-        #num_pages = len(pdf_reader.pages)
-        ##text = ""
-        #for page_num in range(num_pages):
-         ##  text += page.extract_text()
-        #return text
-
-
-def download_button(pdf_contents, file_name="C.V.txt"):
-    # Create a download link for the PDF file
-    b64_pdf = base64.b64encode(pdf_contents.encode()).decode()
-    href = f'<a href="data:file/txt;base64,{b64_pdf}" download="{file_name}">Curriculum vitae</a>'
-    st.markdown(href, unsafe_allow_html=True)
-
-
-"""
 def crop_fun(image):
     cropped_img = st_cropper(image,aspect_ratio=None)
     return cropped_img
