@@ -4,8 +4,8 @@ Created on Mon Apr 17 12:35:33 2023
 
 @author: 91916
 """
-from PyPDF2 import PdfReader
-import base64
+#from PyPDF2 import PdfReader
+#import base64
 
 import io
 from PIL import Image as im
@@ -24,7 +24,7 @@ from img_classification_only_pearlite import teachable_machine_classification
 model_adress_pear='trail-3_100ep_4_batch_extend_trial5.h5'
 
 
-
+"""
 def read_pdf():
     file_path="PhD CV.pdf"
 
@@ -47,7 +47,7 @@ def download_button(pdf_contents, file_name="C.V.txt"):
     st.markdown(href, unsafe_allow_html=True)
 
 
-
+"""
 def crop_fun(image):
     cropped_img = st_cropper(image,aspect_ratio=None)
     return cropped_img
@@ -165,12 +165,12 @@ with tab3:
         
         nikhil=cv2.imread("nikhil_1.png",0)
         st.image(nikhil,caption="Ph.D Student Nikhil Chaurasia")
-        pdf_reader = read_pdf()
+        #pdf_reader = read_pdf()
         
         #st.text(pdf_text)
         
         # Add a download button for the PDF file
-        download_button(pdf_reader, file_name="C.V.pdf")
+        #download_button(pdf_reader, file_name="C.V.pdf")
         
         st.subheader("Linkedin-www.linkedin.com/in/nikhil-chaurasia")
         st.text("Email-nikc@iitk.ac.in")
