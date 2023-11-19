@@ -4,10 +4,12 @@ Created on Mon Apr 17 12:35:33 2023
 
 @author: 91916
 """
+from PyPDF2 import PdfReader
+import base64
+
 import io
 from PIL import Image as im
 import streamlit as st
-
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
@@ -20,6 +22,30 @@ from matplotlib import pyplot as plt
 from img_classification_only_pearlite import teachable_machine_classification
 
 model_adress_pear='trail-3_100ep_4_batch_extend_trial5.h5'
+
+
+
+def read_pdf():
+    file_path="PhD CV.pdf"
+
+    with open(file_path, 'rb') as file:
+        pdf_reader = PdfReader(file)
+        pdf_contents = file.read()
+        encoded_pdf = base64.b64encode(pdf_contents).decode()
+        return encoded_pdf
+        #num_pages = len(pdf_reader.pages)
+        ##text = ""
+        #for page_num in range(num_pages):
+         ##  text += page.extract_text()
+        #return text
+
+
+def download_button(pdf_contents, file_name="C.V.txt"):
+    # Create a download link for the PDF file
+    b64_pdf = base64.b64encode(pdf_contents.encode()).decode()
+    href = f'<a href="data:file/txt;base64,{b64_pdf}" download="{file_name}">Curriculum vitae</a>'
+    st.markdown(href, unsafe_allow_html=True)
+
 
 
 def crop_fun(image):
@@ -139,6 +165,13 @@ with tab3:
         
         nikhil=cv2.imread("nikhil_1.png",0)
         st.image(nikhil,caption="Ph.D Student Nikhil Chaurasia")
+        pdf_reader = read_pdf()
+        
+        #st.text(pdf_text)
+        
+        # Add a download button for the PDF file
+        download_button(pdf_reader, file_name="C.V.pdf")
+        
         st.subheader("Linkedin-www.linkedin.com/in/nikhil-chaurasia")
         st.text("Email-nikc@iitk.ac.in")
         text_paragraphs = ("I'm deeply involved in advancing AI-based characterization techniques\n\n""specifically concentrating on micrographs.\n\n"" My current focus involves employing deep learning for the quantification of pearlite lamellae,\n\n ""microstructure cleaning, and fractography quantification.")
