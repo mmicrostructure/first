@@ -1,3 +1,4 @@
+PyPDF2==3.0.1
 keras==2.8.0
 Pillow==9.4.0
 scikit-image==0.19.2
